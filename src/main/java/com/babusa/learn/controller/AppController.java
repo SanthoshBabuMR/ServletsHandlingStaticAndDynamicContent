@@ -16,6 +16,7 @@ public class AppController extends HttpServlet {
         System.out.println("req.getMethod(): " + req.getMethod());
         System.out.println("req.getContextPath(): " + req.getContextPath());
         System.out.println("req.getServletPath(): " + req.getServletPath());
+        System.out.println("req.getPathInfo(): " + req.getPathInfo());
         System.out.println("req.getQueryString(): " + req.getQueryString());
         res.getWriter().append("Hello World (app-03)");
     }
