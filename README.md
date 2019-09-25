@@ -8,8 +8,12 @@
 - http://localhost:8080/app-03/
 - dynamic pages
     - http://localhost:8080/app-03/
-- static content ( doesn't work - throws 404 )
+- static content
     - http://localhost:8080/app-03/static/base.css
     - http://localhost:8080/app-03/static/index.html
     - http://localhost:8080/app-03/static/index.js
     - http://localhost:8080/app-03/static/pic.jpg
+
+---
+
+**There's some issue since app is not able to pick welcome file i.e. index.html**
