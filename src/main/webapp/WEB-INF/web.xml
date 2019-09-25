@@ -13,7 +13,7 @@
         </init-param>
         <init-param>
             <param-name>dynamicResourcePath</param-name>
-            <param-value>app</param-value>
+            <param-value>dynamic</param-value>
         </init-param>
     </filter>
 
@@ -34,13 +34,13 @@
 
     <servlet-mapping>
         <servlet-name>AppController</servlet-name>
-        <url-pattern>/app/*</url-pattern>
+        <url-pattern>/dynamic/*</url-pattern>
         <load-on-startup>0</load-on-startup>
     </servlet-mapping>
 
     <welcome-file-list>
         <welcome-file>
-            index.jsp
+            index.html
         </welcome-file>
     </welcome-file-list>
 

@@ -9,7 +9,8 @@ import java.io.IOException;
 public class AppController extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
         StringBuffer data = new StringBuffer();
-        
+
+        data.append("\n URL endpoint: "+ req.getPathInfo());
         data.append("\n req.getAttributeNames(): "+ req.getAttributeNames());
         data.append("\n req.getServerName(): " + req.getServerName());
         data.append("\n req.getServerPort(): " + req.getServerPort());
