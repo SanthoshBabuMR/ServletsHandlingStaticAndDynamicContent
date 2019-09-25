@@ -8,17 +8,23 @@ import java.io.IOException;
 
 public class AppController extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-        System.out.println(req.getAttributeNames());
-        System.out.println("req.getServerName(): " + req.getServerName());
-        System.out.println("req.getServerPort(): " + req.getServerPort());
-        System.out.println("req.isSecure(): " + req.isSecure());
-        System.out.println("req.getRequestURI(): " + req.getRequestURI());
-        System.out.println("req.getMethod(): " + req.getMethod());
-        System.out.println("req.getContextPath(): " + req.getContextPath());
-        System.out.println("req.getServletPath(): " + req.getServletPath());
-        System.out.println("req.getPathInfo(): " + req.getPathInfo());
-        System.out.println("req.getQueryString(): " + req.getQueryString());
-        res.getWriter().append("Hello World (app-03)");
+        StringBuffer data = new StringBuffer();
+        
+        data.append("\n req.getAttributeNames(): "+ req.getAttributeNames());
+        data.append("\n req.getServerName(): " + req.getServerName());
+        data.append("\n req.getServerPort(): " + req.getServerPort());
+        data.append("\n req.isSecure(): " + req.isSecure());
+        data.append("\n req.getRequestURI(): " + req.getRequestURI());
+        data.append("\n req.getMethod(): " + req.getMethod());
+        data.append("\n req.getContextPath(): " + req.getContextPath());
+        data.append("\n req.getServletPath(): " + req.getServletPath());
+        data.append("\n req.getPathInfo(): " + req.getPathInfo());
+        data.append("\n req.getQueryString(): " + req.getQueryString());
+        String out = data.toString();
+        System.out.println(out);
+        out = "<h1>Hello World (app-03)</h1><br />" + out;
+        out = out.replaceAll("req.", "<br />req.");
+        res.getWriter().append(out);
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {

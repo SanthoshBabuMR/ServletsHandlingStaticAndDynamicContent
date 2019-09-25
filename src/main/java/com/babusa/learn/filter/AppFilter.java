@@ -27,7 +27,7 @@ public class AppFilter implements Filter {
         if (path.startsWith("/" + staticResourcePath)) {
             // Goes to default servlet.
             System.out.println("static content");
-            // httpServletReq.getServletContext().getNamedDispatcher("default").forward(request, response);
+//             httpServletReq.getServletContext().getNamedDispatcher("default").forward(request, response);
             chain.doFilter(request, response);
         } else {
             System.out.println("dynamic content");
